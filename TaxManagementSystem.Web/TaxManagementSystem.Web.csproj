@@ -178,6 +178,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TaxManagementSystem.Business\TaxManagementSystem.Business.csproj">
+      <Project>{0A928EB3-EBDC-4AAA-9345-C92758A68FBD}</Project>
+      <Name>TaxManagementSystem.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TaxManagementSystem.Core\TaxManagementSystem.Core.csproj">
       <Project>{0c1ebed3-3ac8-4463-a418-1f868c30fd66}</Project>
       <Name>TaxManagementSystem.Core</Name>

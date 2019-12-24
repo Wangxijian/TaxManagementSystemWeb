@@ -6,6 +6,8 @@ namespace TaxManagementSystem.Web.Controllers
     using System.Net;
     using System.Net.Http;
     using System.Web.Http;
+    using TaxManagementSystem.Business.Service.Concrete;
+    using TaxManagementSystem.Core.DDD.Service;
     using TaxManagementSystem.Model.Common;
     using TaxManagementSystem.Model.Show;
 
@@ -15,6 +17,23 @@ namespace TaxManagementSystem.Web.Controllers
     public class AdvertisementController : ApiController
     {
 
+        /// <summary>
+        /// 测试方法 API
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public Result TestFunction()
+        {
+
+            //获取测试服务
+            ITestService service = ServiceObjectContainer.Get<ITestService>();
+
+            Result result = service.TestFunction();
+
+            return result;
+
+        }
+
 
         /// <summary>
         /// 获取广告列表api
@@ -23,6 +42,7 @@ namespace TaxManagementSystem.Web.Controllers
         [HttpPost]
         public Result<TestInfo> GetAdvertisementList()
         {
+            
             Result<TestInfo> result = new Result<TestInfo>();
 
 

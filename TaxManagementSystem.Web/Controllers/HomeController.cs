@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TaxManagementSystem.Business.Service.Concrete;
+using TaxManagementSystem.Core.DDD.Service;
+using TaxManagementSystem.Model.Common;
 
 namespace TaxManagementSystem.Web.Controllers
 {
@@ -19,6 +22,12 @@ namespace TaxManagementSystem.Web.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
+
+            //获取测试服务
+            ITestService service = ServiceObjectContainer.Get<ITestService>();
+
+            Result result = service.TestFunction();
+
             return View();
         }
         
