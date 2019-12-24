@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ECA45B8C-9893-4DE9-8D0C-37CB8CA4E841}</ProjectGuid>
+    <ProjectGuid>{EBBA42FB-64DC-4AC0-8ACB-0A664ED3664B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TaxManagementSystem.Model</RootNamespace>
-    <AssemblyName>TaxManagementSystem.Model</AssemblyName>
+    <RootNamespace>TaxManagementSystem.Drms</RootNamespace>
+    <AssemblyName>TaxManagementSystem.Drms</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\TaxManagementSystem.Core\Lib\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,13 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Result.cs" />
-    <Compile Include="Data\TestInfo.cs" />
+    <Compile Include="DataBaseMode\TestMode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Show\TestInfo.cs" />
+    <Compile Include="Spefication\SpeficationBase.cs" />
+    <Compile Include="Spefication\TestSelectSpefication.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Enum\" />
+    <ProjectReference Include="..\TaxManagementSystem.Core\TaxManagementSystem.Core.csproj">
+      <Project>{0C1EBED3-3AC8-4463-A418-1F868C30FD66}</Project>
+      <Name>TaxManagementSystem.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaxManagementSystem.Model\TaxManagementSystem.Model.csproj">
+      <Project>{ECA45B8C-9893-4DE9-8D0C-37CB8CA4E841}</Project>
+      <Name>TaxManagementSystem.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

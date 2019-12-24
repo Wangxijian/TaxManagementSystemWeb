@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxManagementSystem.Web", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxManagementSystem.Model", "TaxManagementSystem.Model\TaxManagementSystem.Model.csproj", "{ECA45B8C-9893-4DE9-8D0C-37CB8CA4E841}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxManagementSystem.Business", "TaxManagementSystem.Business\TaxManagementSystem.Business.csproj", "{0A928EB3-EBDC-4AAA-9345-C92758A68FBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxManagementSystem.Drms", "TaxManagementSystem.Drms\TaxManagementSystem.Drms.csproj", "{EBBA42FB-64DC-4AC0-8ACB-0A664ED3664B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{ECA45B8C-9893-4DE9-8D0C-37CB8CA4E841}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECA45B8C-9893-4DE9-8D0C-37CB8CA4E841}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECA45B8C-9893-4DE9-8D0C-37CB8CA4E841}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A928EB3-EBDC-4AAA-9345-C92758A68FBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A928EB3-EBDC-4AAA-9345-C92758A68FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A928EB3-EBDC-4AAA-9345-C92758A68FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A928EB3-EBDC-4AAA-9345-C92758A68FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBBA42FB-64DC-4AC0-8ACB-0A664ED3664B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBBA42FB-64DC-4AC0-8ACB-0A664ED3664B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBBA42FB-64DC-4AC0-8ACB-0A664ED3664B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBBA42FB-64DC-4AC0-8ACB-0A664ED3664B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

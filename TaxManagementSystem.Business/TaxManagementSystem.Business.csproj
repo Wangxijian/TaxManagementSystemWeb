@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ECA45B8C-9893-4DE9-8D0C-37CB8CA4E841}</ProjectGuid>
+    <ProjectGuid>{0A928EB3-EBDC-4AAA-9345-C92758A68FBD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TaxManagementSystem.Model</RootNamespace>
-    <AssemblyName>TaxManagementSystem.Model</AssemblyName>
+    <RootNamespace>TaxManagementSystem.Business</RootNamespace>
+    <AssemblyName>TaxManagementSystem.Business</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,13 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Result.cs" />
-    <Compile Include="Data\TestInfo.cs" />
+    <Compile Include="Handle\TestHandle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Show\TestInfo.cs" />
+    <Compile Include="Service\TestService.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Enum\" />
+    <ProjectReference Include="..\TaxManagementSystem.Core\TaxManagementSystem.Core.csproj">
+      <Project>{0C1EBED3-3AC8-4463-A418-1F868C30FD66}</Project>
+      <Name>TaxManagementSystem.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaxManagementSystem.Drms\TaxManagementSystem.Drms.csproj">
+      <Project>{ebba42fb-64dc-4ac0-8acb-0a664ed3664b}</Project>
+      <Name>TaxManagementSystem.Drms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaxManagementSystem.Model\TaxManagementSystem.Model.csproj">
+      <Project>{eca45b8c-9893-4de9-8d0c-37cb8ca4e841}</Project>
+      <Name>TaxManagementSystem.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
