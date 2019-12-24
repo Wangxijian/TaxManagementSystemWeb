@@ -38,10 +38,15 @@ namespace TaxManagementSystem.Web
             MysqlDBConnection.Current.LoginUser = "";
             MysqlDBConnection.Current.Password = "";
 
+            //数据库部署
+            MysqlDBConnection.Current.Deployment();
 
             //集线器加载
             HubContainer.Load(Assembly.Load("TaxManagementSystem.Business"));
+            //服务加载
             ServiceObjectContainer.Load(Assembly.Load("TaxManagementSystem.Business"));
+            
+
         }
 
 

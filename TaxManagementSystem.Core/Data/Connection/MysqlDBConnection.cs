@@ -10,6 +10,8 @@
     {
         private static MysqlDBConnection DB_CONNECTION = null;
 
+        private static MySqlConnection connection = null;
+
         public static MysqlDBConnection Current
         {
             get
@@ -79,7 +81,7 @@
         public MySqlConnection Deployment()
         {
             WorkThreadDictionary work = WorkThreadDictionary.Get();
-            MySqlConnection connection = null;
+            //MySqlConnection connection = null;
             if (work != null)
             {
                 connection = work.Get<MySqlConnection>(WORK_KEY_NAME);
@@ -87,10 +89,10 @@
             if (connection == null)
             {
                 connection = new MySqlConnection();
-                if (work != null)
-                {
-                    work.Set(WORK_KEY_NAME, connection);
-                }
+                //if (work != null)
+                //{
+                //    work.Set(WORK_KEY_NAME, connection);
+                //}
                 //connection.FireInfoMessageEventOnUserErrors = true;
                 connection.Disposed += Connection_Disposed;
                 //connection.InfoMessage += Connection_InfoMessage;
