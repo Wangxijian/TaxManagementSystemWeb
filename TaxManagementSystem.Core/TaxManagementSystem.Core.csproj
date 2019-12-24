@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,8 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LongFordWeb\LongFordWeb\lib\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,7 +47,89 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AOP\Data\DataModelProxyConverter.cs" />
+    <Compile Include="AOP\Proxy\InterfaceProxy.cs" />
+    <Compile Include="AOP\Proxy\InvocationHandler.cs" />
+    <Compile Include="AOP\Proxy\Program.cs" />
+    <Compile Include="Collection\SafetyList.cs" />
+    <Compile Include="Component\Contract.cs" />
+    <Compile Include="Component\WorkThreadDictionary.cs" />
+    <Compile Include="Configuration\INIDocument.cs" />
+    <Compile Include="Configuration\INIKey.cs" />
+    <Compile Include="Configuration\INIKeyCollection.cs" />
+    <Compile Include="Configuration\INISection.cs" />
+    <Compile Include="Configuration\INISectionCollection.cs" />
+    <Compile Include="Configuration\NativeMethods.cs" />
+    <Compile Include="Cryptography\Base64Engine.cs" />
+    <Compile Include="Cryptography\MD5Engine.cs" />
+    <Compile Include="Cryptography\RC4Engine.cs" />
+    <Compile Include="Cryptography\SHA1Engine.cs" />
+    <Compile Include="Data\ConnectionFactory\MysqlServerConnection.cs" />
+    <Compile Include="Data\ConnectionFactory\SqlServerConnection.cs" />
+    <Compile Include="Data\Connection\DBConnection.cs" />
+    <Compile Include="Data\Connection\MysqlDBConnection.cs" />
+    <Compile Include="Data\Converter\DataModelConverter.cs" />
+    <Compile Include="Data\DBReader.cs" />
+    <Compile Include="Data\DbTransaction.cs" />
+    <Compile Include="Data\DBWriter.cs" />
+    <Compile Include="Data\Dynamic\ExpandoObject.cs" />
+    <Compile Include="Data\GlobalSuppressions.cs" />
+    <Compile Include="Data\MysqlDBReader.cs" />
+    <Compile Include="Data\MysqlDBWriter.cs" />
+    <Compile Include="Data\MysqlHelper.cs" />
+    <Compile Include="Data\MysqlSDLHelper.cs" />
+    <Compile Include="Data\Repository\AggregateRoot.cs" />
+    <Compile Include="Data\Repository\IQueryable.cs" />
+    <Compile Include="Data\Repository\IRepository.cs" />
+    <Compile Include="Data\Repository\Repository.cs" />
+    <Compile Include="Data\SDLHelper.cs" />
+    <Compile Include="Data\Specifications\CountSpecification.cs" />
+    <Compile Include="Data\Specifications\ExpressionSpecification.cs" />
+    <Compile Include="Data\Specifications\ISpecification.cs" />
+    <Compile Include="Data\Specifications\OrderBySpecification.cs" />
+    <Compile Include="Data\Specifications\Specification.cs" />
+    <Compile Include="Data\Specifications\TopSpecification.cs" />
+    <Compile Include="Data\Specifications\WhereSpecification.cs" />
+    <Compile Include="Data\SQLHelper.cs" />
+    <Compile Include="Data\TransactionBase.cs" />
+    <Compile Include="DDD\Events\EventBus.cs" />
+    <Compile Include="DDD\Events\ICallback.cs" />
+    <Compile Include="DDD\Events\IEvent.cs" />
+    <Compile Include="DDD\Events\IEventHandler.cs" />
+    <Compile Include="DDD\Hub\HubAttribute.cs" />
+    <Compile Include="DDD\Hub\HubContainer.cs" />
+    <Compile Include="DDD\Hub\IHub.cs" />
+    <Compile Include="DDD\Service\IoCContainerBase.cs" />
+    <Compile Include="DDD\Service\IServiceBase.cs" />
+    <Compile Include="DDD\Service\ServiceBaseContainer.cs" />
+    <Compile Include="DDD\Service\ServiceFilter.cs" />
+    <Compile Include="DDD\Service\ServiceFilterContainer.cs" />
+    <Compile Include="DDD\Service\ServiceObjectAttribute.cs" />
+    <Compile Include="DDD\Service\ServiceObjectContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialization\AdvancedObjectFormatter.cs" />
+    <Compile Include="Serialization\AdvancedObjectMarshalAsAttribute.cs" />
+    <Compile Include="Serialization\BinaryFormatter.cs" />
+    <Compile Include="Serialization\DataContractJsonSerializer.cs" />
+    <Compile Include="Serialization\FixedLengthFormatter.cs" />
+    <Compile Include="Serialization\NBinaryFormatter.cs" />
+    <Compile Include="Serialization\WebSerializer.cs" />
+    <Compile Include="Serialization\XmlSerializer.cs" />
+    <Compile Include="Tools\SystemConfigLoader.cs" />
+    <Compile Include="Tools\SystemConfigModel.cs" />
+    <Compile Include="Utilits\AttributeUnit.cs" />
+    <Compile Include="Utilits\HashUnit.cs" />
+    <Compile Include="Utilits\IPAddressUnit.cs" />
+    <Compile Include="Utilits\ListUnit.cs" />
+    <Compile Include="Utilits\ModelUnit.cs" />
+    <Compile Include="Utilits\StringUnit.cs" />
+    <Compile Include="Utilits\ThreadUnit.cs" />
+    <Compile Include="Utilits\TypeUnit.cs" />
+    <Compile Include="ValueType\ValueTypeFormatter.cs" />
+    <Compile Include="ValueType\ValueTypeUnit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lib\MySql.Data.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
