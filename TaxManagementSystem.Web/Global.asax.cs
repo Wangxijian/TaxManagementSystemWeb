@@ -33,10 +33,10 @@ namespace TaxManagementSystem.Web
         protected void Prepared()
         {
 
-            MysqlDBConnection.Current.Database = "";
+            MysqlDBConnection.Current.Database = "taxmanagement";
             MysqlDBConnection.Current.Server = "localhost";
-            MysqlDBConnection.Current.LoginUser = "";
-            MysqlDBConnection.Current.Password = "";
+            MysqlDBConnection.Current.LoginUser = "root";
+            MysqlDBConnection.Current.Password = "123456";
 
             //数据库部署
             MysqlDBConnection.Current.Deployment();

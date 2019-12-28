@@ -74,6 +74,7 @@
             {
                 result.Status = false;
                 result.Message = ex.Message;
+
             }
 
             return result;

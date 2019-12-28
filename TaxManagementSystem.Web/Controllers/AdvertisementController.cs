@@ -17,6 +17,12 @@ namespace TaxManagementSystem.Web.Controllers
     public class AdvertisementController : ApiController
     {
 
+        [HttpPost]
+        public TestInfo HelloApi(TestInfo info)
+        {
+            return info;
+        }
+
         /// <summary>
         /// 测试方法 API
         /// </summary>

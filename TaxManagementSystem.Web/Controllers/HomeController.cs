@@ -28,8 +28,18 @@ namespace TaxManagementSystem.Web.Controllers
 
             Result result = service.TestFunction();
 
+            
             return View();
         }
-        
+
+        public JsonResult Getsss()
+        {
+            ITestService service = ServiceObjectContainer.Get<ITestService>();
+
+            Result result = service.TestFunction();
+
+            return Json(result);
+        }
+
     }
 }
